@@ -1,61 +1,163 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Bimo CRM
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bimo CRM adalah sistem manajemen hubungan pelanggan (Customer Relationship Management) yang dirancang untuk perusahaan penyedia layanan internet dan telekomunikasi. Aplikasi ini menyediakan fitur lengkap untuk mengelola leads, penawaran, langganan, dan komunikasi dengan pelanggan.
 
-## About Laravel
+![Bimo CRM Dashboard](https://via.placeholder.com/1200x600/e1e1e1/808080?text=Bimo+CRM+Dashboard)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Fitur Utama
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   **Manajemen Lead**: Lacak dan kelola semua prospek potensial dengan mudah
+-   **Penawaran Produk**: Buat dan kelola penawaran produk untuk leads
+-   **Manajemen Langganan**: Kelola siklus hidup langganan dari awal hingga perpanjangan
+-   **Produk & Harga**: Kelola katalog produk dengan berbagai paket harga
+-   **Pengelolaan Pengguna**: Sistem peran dan izin yang komprehensif
+-   **Notifikasi**: Pemberitahuan otomatis untuk aktivitas penting
+-   **Activity Logging**: Lacak semua aktivitas untuk audit dan analisis
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Teknologi
 
-## Learning Laravel
+-   **Backend**: Laravel 10
+-   **Frontend**: React.js dengan Inertia.js
+-   **UI Components**: Shadcn UI
+-   **Database**: MySQL
+-   **Authentication**: Laravel Fortify
+-   **Authorization**: Laravel Permissions (Spatie)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Persyaratan Sistem
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+-   PHP 8.2 atau lebih tinggi
+-   Node.js 18 atau lebih tinggi
+-   MySQL 8.0 atau lebih tinggi
+-   Composer
+-   npm atau yarn
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Instalasi
 
-## Laravel Sponsors
+### Menggunakan Git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Clone repositori ini
 
-### Premium Partners
+    ```bash
+    git clone https://github.com/Biyuraaa/bimo_crm.git
+    cd bimo_crm
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+    ```
 
-## Contributing
+2. Instal dependencies PHP
+    ```bash
+    composer install
+    ```
+3. Instal dependencies JavaScript
+    ```bash
+    npm install
+    # atau
+    yarn install
+    ```
+4. Salin file `.env.example` ke `.env` dan sesuaikan konfigurasi database
+    ```bash
+    cp .env.example .env
+    ```
+5. Generate kunci aplikasi
+    ```bash
+    php artisan key:generate
+    ```
+6. Konfigurasi database di file .env
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=bimo_crm
+    DB_USERNAME=root
+    DB_PASSWORD=
+    ```
+7. Jalankan database migrations dan seeder
+    ```bash
+    php artisan migrate --seed
+    ```
+8. Compile assets
+    ```bash
+    npm run dev
+    # atau untuk production
+    npm run build
+    ```
+9. Jalankan aplikasi
+    ```bash
+    php artisan serve
+    ```
+10. Akses aplikasi di `http://localhost:8000`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Pengguna Default
 
-## Code of Conduct
+### Setelah menginstal aplikasi, Anda dapat login dengan pengguna default berikut:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+-   **Administrator**
+    -   Email: `admin@smart.com'
+    -   Password: `password`
+-   **Sales**
+    -   Email: `sales@smart.com'
+    -   Password: `password`
+-   **Manager**
+    -   Email: `manager@smart.com'
+    -   Password: `password`
 
-## Security Vulnerabilities
+## Role dan Izin
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+-   **Administrator**: Akses penuh ke semua fitur
+-   **Sales**: Akses terbatas untuk mengelola leads dan penawaran
+-   **Manager**: Akses untuk mengelola langganan dan laporan
 
-## License
+## Panduan Pengguna
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+-   **Mengelola Leads**
+
+    -   Navigasi ke menu Leads di sidebar
+    -   Gunakan tombol Add Lead untuk menambahkan lead baru
+    -   Klik pada lead untuk melihat detail atau mengedit informasi
+
+-   **Membuat Penawaran**
+
+    -   Buka halaman detail lead
+    -   Klik tombol Create Offer
+    -   Pilih produk dan paket harga yang ingin ditawarkan
+    -   Atur detail kontrak seperti durasi dan perpanjangan otomatis
+    -   Klik Create Offer untuk menyelesaikan
+
+-   **Mengelola Langganan**
+    -   Navigasi ke menu Subscriptions
+    -   Lihat semua langganan aktif, menunggu persetujuan, atau berakhir
+    -   Klik pada langganan untuk melihat detail atau melakukan tindakan
+
+## Kontribusi
+
+Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
+
+1. Fork repositori ini
+2. Buat branch baru untuk fitur atau perbaikan Anda
+3. Lakukan perubahan dan commit
+4. Push ke branch Anda
+5. Buat pull request
+
+## Lisensi
+
+Proyek ini dilisensikan di bawah MIT License. Silakan lihat file [LICENSE](LICENSE) untuk informasi lebih lanjut.
+
+## Kontak
+
+Jika Anda memiliki pertanyaan atau umpan balik, silakan hubungi kami di:
+
+-   Email: m.bimo.bayu.bagaskara-2022@fst.unair.ac.id
+-   GitHub: [Biyuraaa](github.com/Biyuraaa)
+
+## Catatan
+
+-   Proyek ini masih dalam tahap pengembangan. Fitur dan fungsionalitas dapat berubah seiring waktu.
+-   Untuk laporan bug atau masalah, silakan buka isu di repositori GitHub.
+
+## Terima Kasih
+
+Terima kasih telah menggunakan Bimo CRM. Kami berharap aplikasi ini membantu Anda dalam mengelola hubungan pelanggan dengan lebih baik.
+
+```
+
+
+```
