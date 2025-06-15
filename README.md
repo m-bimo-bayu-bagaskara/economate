@@ -32,7 +32,7 @@ EconoMate is a comprehensive personal finance management system built with Larav
 1. **Clone the repository**
 
     ```bash
-    https://github.com/m-bimo-bayu-bagaskara/economate.git
+    git clone https://github.com/m-bimo-bayu-bagaskara/economate.git
     cd economate
     ```
 
