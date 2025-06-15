@@ -38,8 +38,8 @@ Bimo CRM adalah sistem manajemen hubungan pelanggan (Customer Relationship Manag
 1. Clone repositori ini
 
     ```bash
-    git clone https://github.com/Biyuraaa/bimo_crm.git
-    cd bimo_crm
+    git clone https://github.com/Biyuraaa/economate.git
+    cd economate
 
     ```
 
@@ -66,7 +66,7 @@ Bimo CRM adalah sistem manajemen hubungan pelanggan (Customer Relationship Manag
     DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
-    DB_DATABASE=bimo_crm
+    DB_DATABASE=economate
     DB_USERNAME=root
     DB_PASSWORD=
     ```
@@ -91,13 +91,13 @@ Bimo CRM adalah sistem manajemen hubungan pelanggan (Customer Relationship Manag
 ### Setelah menginstal aplikasi, Anda dapat login dengan pengguna default berikut:
 
 -   **Administrator**
-    -   Email: `admin@smart.com'
+    -   Email: `admin@EconoMate.com'
     -   Password: `password`
 -   **Sales**
-    -   Email: `sales@smart.com'
+    -   Email: `sales@EconoMate.com'
     -   Password: `password`
 -   **Manager**
-    -   Email: `manager@smart.com'
+    -   Email: `manager@EconoMate.com'
     -   Password: `password`
 
 ## Role dan Izin
